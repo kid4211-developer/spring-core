@@ -14,10 +14,13 @@ import org.springframework.context.annotation.Configuration;
 
 /**
  * @Configuration
+ * 1)
  * - Application 전체 동작 방식을 구성(config) 하기 위해, 구현 객체를 생성하고 연결하는 책임을 가지는 별도의 설정 클래스
- * - Spring Container 는 @Configuration 이 붙은 config 파일을 설정 정보로 사용한다.
+ * - Spring Container(ApplicationContext)는 @Configuration 이 붙은 config 파일을 설정 정보로 사용한다.
  * - @Bean 으로 등록된 메서드를 모두 호출해서 반환된 객체를 Spring Container 에 등록되는데 이렇게 등록된 객체를 Spring Bean 이라고 한다.
  * - ApplicationContext 객체를 통해 getBean() 메서드를 사용하여 객체를 반환 받는다.
+ *
+ * 2)
  */
 @Configuration
 public class AppConfig {
