@@ -20,7 +20,7 @@ import org.springframework.context.annotation.Configuration;
  * - @Bean 으로 등록된 메서드를 모두 호출해서 반환된 객체를 Spring Container 에 등록되는데 이렇게 등록된 객체를 Spring Bean 이라고 한다.
  * - ApplicationContext 객체를 통해 getBean() 메서드를 사용하여 객체를 반환 받는다.
  *
- * 2)
+ * 2) Singleton Pattern 을 위해 @Configuration 을 사용하여 스프링 컨테이너를 만들어준다.
  */
 @Configuration
 public class AppConfig {
