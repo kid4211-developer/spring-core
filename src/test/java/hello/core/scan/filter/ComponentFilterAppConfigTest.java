@@ -18,6 +18,10 @@ public class ComponentFilterAppConfigTest {
         ApplicationContext ac = new AnnotationConfigApplicationContext(ComponentFilterAppConfig.class);
         BeanA beanA = ac.getBean("beanA", BeanA.class);
         assertThat(beanA).isNotNull();
+
+        /**
+         * 필터 처리된 beanB 의 빈을 get 하면 NoSuchBeanDefinitionException 에러가 발생 할 것
+         */
         Assertions.assertThrows(NoSuchBeanDefinitionException.class, () -> ac.getBean("beanB", BeanB.class));
     }
 
